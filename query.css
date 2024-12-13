@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-    nav {
+    .about-content {
         flex-direction: column;
         align-items: center;
     }
@@ -13,6 +13,13 @@
     }
 
     article {
+        margin-bottom: 15px;
+    }
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .profile-photo {
         margin-bottom: 15px;
     }
 }
