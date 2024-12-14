@@ -1,21 +1,31 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "yoasnevilsandy@gmail.com"; 
-    $subject = "Pesan dari Blog Anda";
-    
-    $name = htmlspecialchars($_POST["name"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $message = htmlspecialchars($_POST["message"]);
+    if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["message"]) && 
+        !empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["message"])) {
 
-    $body = "Nama: $name\nEmail: $email\n\nPesan:\n$message";
+        $name = htmlspecialchars($_POST["name"]);
+        $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+        $message = htmlspecialchars($_POST["message"]);
 
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "Alamat email tidak valid.";
+            exit;
+        }
 
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Pesan berhasil dikirim!";
+        $to = "yoasnevilsandy@gmail.com";
+        $subject = "Pesan dari Blog Anda";
+        $body = "Nama: $name\nEmail: $email\n\nPesan:\n$message";
+
+        $headers = "From: $email\r\n";
+        $headers .= "Reply-To: $email\r\n";
+
+        if (mail($to, $subject, $body, $headers)) {
+            echo "Pesan berhasil dikirim!";
+        } else {
+            echo "Pesan gagal dikirim.";
+        }
     } else {
-        echo "Pesan gagal dikirim.";
+        echo "Harap isi semua kolom.";
     }
 } else {
     echo "Metode pengiriman tidak valid.";

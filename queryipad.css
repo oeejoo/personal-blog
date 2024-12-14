@@ -1,0 +1,32 @@
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .portofolio-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .hero {
+        padding: 90px 20px;
+    }
+
+    .cta-button {
+        padding: 12px 40px;
+        font-size: 1.1rem;
+    }
+
+    footer .social-button {
+        padding: 10px 15px;
+        font-size: 1.1rem;
+    }
+
+    footer a {
+        font-size: 1.1rem;
+    }
+}

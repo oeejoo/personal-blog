@@ -1,0 +1,71 @@
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav a {
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    .portofolio-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 10px;
+    }
+
+    .portofolio-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .cta-button {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+
+    footer .social-button {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+
+    footer a {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    article {
+        padding: 10px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 90px;
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

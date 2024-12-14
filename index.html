@@ -6,7 +6,9 @@
     <meta name="description" content="Blogger pribadi untuk berbagi cerita dan pengalaman">
     <title>Personal Blog</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="query.css">
+    <link rel="stylesheet" href="querymobile.css">
+    <link rel="stylesheet" href="querytab.css">
+    <link rel="stylesheet" href="queryipad.css">
     <script src="popup.js" defer></script>
     <script src="scroll.js" defer></script>
     <script src="load.js" defer></script>
@@ -21,7 +23,7 @@
     <nav>
         <a class="button" href="#home"><i class="fas fa-home"></i> Home</a>
         <a class="button" href="#about"><i class="fas fa-user"></i> Tentang Saya</a>
-        <a class="button" href="#portof0iio"><i class="fas fa-pen"></i> Blog</a>
+        <a class="button" href="#portofolio"><i class="fas fa-pen"></i> Portofolio</a>
         <a class="button" href="#contact"><i class="fas fa-envelope"></i> Kontak</a>
     </nav>
     <section class="hero">
@@ -48,29 +50,44 @@
         </div>
         <section>
         <article id="portofolio">
-            <h2><i class="fas fa-pen"></i> Portofolio</h2>
-            <div class="portfolio-container" id="portfolio">
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Project 1">
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Project 2">
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Project 3">
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Project 4">
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://via.placeholder.com/300x200" alt="Project 5">
+            <h2><i class="fas fa-folder"></i> Portofolio</h2>
+            <div class="portofolio-container">
+                <div class="portofolio-item">
+                    <img src="porto1.png" alt="Project 1">
+                    <div class="overlay">
+                        <h3>The Blackhole</h3>
+                        <p>Karya 3D yang saya buat adalah visualisasi artistik dari sebuah lubang hitam dengan cakram akresi di sekelilingnya. 
+                        Di pusatnya, lubang hitam yang gelap dan misterius menciptakan distorsi gravitasi yang terlihat melalui efek pelengkungan cahaya. 
+                        Cakram akresi, berupa gas dan debu yang bersinar terang, melingkar dengan kecepatan tinggi, memancarkan energi yang intens.
+                    </p>
+                    </div>
                 </div>
             </div>
-
-            <div class="scroll-buttons">
-                <button class="scroll-button" onclick="scrollPortfolio('left')">← Sebelumnya</button>
-            <button class="scroll-button" onclick="scrollPortfolio('right')">Berikutnya →</button>
-        </div>
+            <div class="portofolio-container">
+                <div class="portofolio-item">
+                    <img src="porto2.png" alt="Project 2">
+                    <div class="overlay">
+                        <h3>The Galaxies</h3>
+                        <p>Karya 3D yang saya buat adalah pemandangan luar angkasa dengan latar belakang hitam penuh bintang. 
+                        Terdapat tiga galaksi spiral yang terlihat di gambar ini. Galaksi terbesar di bagian bawah tengah memiliki warna campuran biru dan ungu yang menakjubkan, 
+                        dengan lengan spiral yang berputar lembut. Di atasnya, terdapat dua galaksi yang lebih kecil; yang satu memiliki warna cokelat lembut, sementara yang lain berwarna ungu terang dengan inti hitam yang mencolok. 
+                        Keindahan dan keragaman warna dari galaksi-galaksi ini memberikan kesan magis dan misterius dari alam semesta yang luas.
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="portofolio-container">
+                <div class="portofolio-item">
+                    <img src="porto3.png" alt="Project 3">
+                    <div class="overlay">
+                        <h3>Guardians of the Sea and Sky</h3>
+                        <p>Karya 3D yang saya buat adalah pemandangan menakjubkan dari armada laut saat matahari terbenam, dengan latar belakang pegunungan berbatu yang tertutup kabut. 
+                        Di latar depan, sebuah kapal induk yang tangguh diapit oleh dua kapal perang besar, masing-masing siap dan siaga untuk bertindak. Dek kapal induk dipenuhi dengan jet tempur, 
+                        menunjukkan kekuatan besar yang dimilikinya. Di atasnya, tiga jet tempur terbang melintasi langit, siluet ramping mereka terlihat jelas di tengah rona keemasan senja.
+                    </p>
+                    </div>
+                </div>
+            </div>
         </section>
         </article>
         <article id="contact">
