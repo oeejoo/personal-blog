@@ -1,5 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] =-- "POST") {
+    echo "POST request diterima";
+    
     $name = htmlspecialchars(trim($_POST["name"] ?? ""));
     $email = filter_var(trim($_POST["email"] ?? ""), FILTER_SANITIZE_EMAIL);
     $message = htmlspecialchars(trim($_POST["message"] ?? ""));
@@ -30,6 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] =-- "POST") {
         echo "Pesan kamu gagal dikirim:( Silahkan coba lagi yaa:)";
     }
 } else {
+    header("HTTP/1.1 405 Method Not Allowed");
     echo "Metode pengiriman tidak valid.";
+    exit;
 }
 ?>
