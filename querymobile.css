@@ -5,27 +5,21 @@
 
     header {
         flex-direction: column;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
+        align-items: flex-start;
     }
 
     nav {
         flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
+        align-items: flex-start;
     }
 
     nav a {
-        margin: 10px 0;
+        margin: 5px 0;
         font-size: 1rem;
     }
 
     .portofolio-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        padding: 10px;
+        grid-template-columns: 1fr;
     }
 
     .portofolio-item {
@@ -34,38 +28,33 @@
     }
 
     .hero {
-        padding: 60px 20px;
+        padding: 50px 20px;
     }
 
-    .cta-button {
-        padding: 10px 30px;
-        font-size: 1rem;
+    .hero h1 {
+        font-size: 2rem;
     }
 
-    footer .social-button {
-        padding: 8px 12px;
-        font-size: 1rem;
+    .cta-button, #comment-form button, footer .social-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 
-    footer a {
-        font-size: 1rem;
+    .comment-section {
+        padding: 15px;
     }
 
-    .container {
-        padding: 10px;
-    }
-
-    article {
-        padding: 10px;
+    .about-content {
+        flex-direction: column;
+        align-items: center;
     }
 
     .profile-photo {
-        width: 120px;
-        height: 90px;
+        width: 100%;
+        height: auto;
     }
 
-    .form-group input, .form-group textarea {
-        padding: 10px;
-        font-size: 0.9rem;
+    #popup-container::after {
+        font-size: 0.8rem;
     }
 }
