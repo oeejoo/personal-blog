@@ -19,7 +19,7 @@
     }
 
     .portofolio-container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .portofolio-item {
