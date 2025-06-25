@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,101 +18,164 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="loading">Memuat...</div>
+    <div id="loading">Loading...</div>
     <header>
-        <h1>Yoas Nevil.blog</h1>
+        <h1>Personal Blog</h1>
     </header>
     <nav>
         <a class="button" href="#home"><i class="fas fa-home"></i> Home</a>
-        <a class="button" href="#about"><i class="fas fa-user"></i> Tentang Saya</a>
-        <a class="button" href="#portofolio"><i class="fas fa-pen"></i> Portofolio</a>
+        <a class="button" href="#about"><i class="fas fa-user"></i> About</a>
+        <a class="button" href="#portfolio"><i class="fas fa-pen"></i> Portfolio</a>
+        <a class="button" href="#games"><i class="fas fa-gamepad"></i> My Games</a>
     </nav>
     <section class="hero">
-        <h1>Selamat datang di oeejoo.blog</h1>
-        <p>Tempat berbagi cerita dan pengalaman menarik.</p>
-        <a href="#portofolio" class="cta-button">Mulai membaca</a>
+        <h1>Welcome</h1>
+        <p>A place to share interesting stories and experiences.</p>
+        <a href="#portfolio" class="cta-button">Start Reading</a>
     </section>
     <div class="container">
         <article id="home">
             <h2><i class="fas fa-home"></i> Home</h2>
-            <p>Hai! Saya Joo, seorang mahasiswa yang mencintai desain dan teknologi. 
-            Di blog ini, saya akan membagikan pengalaman saya dalam dunia game, 
-            Desain Environment 3D, dan hobi saya yang lain. Ikuti perjalanan saya dan 
-            temukan inspirasi baru di setiap tulisan!</p>
+            <p>Hello! Welcome to my Personal Blog, a place where I share my journey and exploration in the world of design, games, and 3D creativity.
+                As a university student who loves design and technology, I believe every idea has the potential to come to life. Here, you will find:
+                    <p>✨ 3D & Environment Design: Showcasing my latest projects.</p>
+                    <p>🎮 Game Design: Insights and experiences in creating engaging games.</p>
+                    <p>💡 Personal Reflections: Thoughts on hobbies, learning processes, and innovation.</p>
         </article>
         <article id="about">
-            <h2><i class="fas fa-user"></i> Tentang Saya</h2>
+            <h2><i class="fas fa-user"></i> About me</h2>
             <div class="about-content">
                 <img src="me.jpg" alt="Yoas Nevil Sandy Samudra" class="profile-photo" onclick="showPopup(this)">
-                <p>Halo, perkenalkan nama saya Yoas Nevil Sandy Samudra, biasa dipanggil Joo. Saya seorang mahasiswa Politeknik Elektronika Negeri Surabaya, jurusan Teknologi Game. 
-                    Saya menyukai desain UI/UX serta 3D Modelling, Texturing, dan Rigging. Hobi saya adalah berolahraga dan menonton drama Korea maupun China.
+                <p>Hi! My name is Yoas Nevil Sandy Samudra, but you can call me Joo. I am a university student who loves design and technology.
+            On this blog, I share my experiences in the world of games, 3D Environment Design, and my other hobbies. Join my journey and
+            find new inspiration in every post!
                 </p>
             </div>
         </article>
         <div id="popup-container" class="popup-hidden" onclick="closePopup()">
             <img id="popup-image" src="" alt="Popup foto">
         </div>
-        <section>
-        <article id="portofolio">
-            <h2><i class="fas fa-folder"></i> Portofolio</h2>
-            <div class="portofolio-container">
-                <div class="portofolio-item">
-                    <img src="porto1.png" alt="Project 1">
-                    <div class="overlay">
-                        <h3>The Blackhole</h3>
-                        <p>Karya 3D yang saya buat adalah visualisasi artistik dari sebuah lubang hitam dengan cakram akresi di sekelilingnya. 
-                        Di pusatnya, lubang hitam yang gelap dan misterius menciptakan distorsi gravitasi yang terlihat melalui efek pelengkungan cahaya. 
-                        Cakram akresi, berupa gas dan debu yang bersinar terang, melingkar dengan kecepatan tinggi, memancarkan energi yang intens.
+    <section>
+    <article id="portfolio">
+        <h2><i class="fas fa-folder"></i> Portfolio</h2>
+        <div class="portofolio-container">
+            <div class="portofolio-item">
+                <img src="porto1.png" alt="Project 1">
+                <div class="overlay">
+                    <h3>The Blackhole</h3>
+                    <p>The 3D artwork I created is an artistic visualization of a black hole with an accretion disk surrounding it.
+                    At its center, the dark and mysterious black hole creates gravitational distortion, visible through the effect of light bending.
+                    The accretion disk, made of brightly glowing gas and dust, circles at high speed, emitting intense energy.
                     </p>
+                </div>
+            </div>
+        </div>
+        <div class="portofolio-container">
+            <div class="portofolio-item">
+                <img src="porto2.png" alt="Project 2">
+                <div class="overlay">
+                    <h3>The Galaxies</h3>
+                    <p>The 3D artwork I created depicts an outer space scene with a black background filled with stars.
+                    There are three spiral galaxies visible in this image. The largest galaxy at the bottom center features a stunning blend of blue and purple colors,
+                    with gently swirling spiral arms. Above it, there are two smaller galaxies; one has a soft brown hue, while the other is bright purple with a striking black core.
+                    The beauty and diversity of colors from these galaxies create a magical and mysterious impression of the vast universe.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="portofolio-container">
+            <div class="portofolio-item">
+                <img src="porto3.png" alt="Project 3">
+                <div class="overlay">
+                    <h3>Guardians of the Sea and Sky</h3>
+                    <p>The 3D artwork I created is a stunning scene of a naval fleet at sunset, with a backdrop of rocky mountains shrouded in mist.
+                    In the foreground, a formidable aircraft carrier is flanked by two large warships, each ready and alert for action. The carrier's deck is filled with fighter jets,
+                    showcasing its immense power. Above, three fighter jets soar across the sky, their sleek silhouettes clearly visible against the golden hues of dusk.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="portofolio-container">
+            <div class="portofolio-item">
+                <img src="porto4.png" alt="Project 4">
+                <div class="overlay">
+                    <h3>Edge of Light</h3>
+                    <p>The 3D artwork I created depicts the Earth in the vast, silent expanse of space. 
+                    Half of the planet is illuminated by sunlight, while the other half is shrouded in the shadow of night. 
+                    A thin line between day and night seems to divide the planet, creating an eternal harmony. 
+                    Among the sparkling stars, Earth may appear small, but it is where life breathes, 
+                    full of countless untold stories.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="portofolio-container">
+            <div class="portofolio-item">
+                <img src="porto5.png" alt="Project 5">
+                <div class="overlay">
+                    <h3>The Fish</h3>
+                    <p>The 3D artwork I created features a Moorish Idol fish (Zanclus cornutus), known for its distinctive 
+                        yellow, black, and white coloration. This fish has a flat body shape with a long, prominent dorsal 
+                        fin and a small, pointed mouth. The plain teal background highlights the details and vibrant colors 
+                        of the fish.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article id="games">
+            <h2><i class="fas fa-gamepad" aria-hidden="true"></i> My Games</h2>
+            <p class="section-intro">
+                These are the games i have made. Click on any game to play it on itch.io. 
+            </p>
+
+            <div class="game-gallery">
+
+        <div class="game-card">
+            <div class="game-thumbnail">
+                <a href="https://silaenn.itch.io/kids-zaman-now" target="_blank">
+                    <img src="https://img.itch.zone/aW1nLzIxNzI2OTUyLnBuZw==/315x250%23c/mGIdgs.png" alt="Kids Zaman Now">
+                </a>
+            </div>
+            <div class="game-content">
+                <h3><a href="https://silaenn.itch.io/kids-zaman-now" target="_blank">Kids Zaman Now</a></h3>
+                <p class="game-tagline">"Kids Zaman Now" is a casual game that puts you in the shoes of a kid who just 
+                    got scolded by his mom for having a messy room.</p>
+                <div class="game-meta">
+                    <span class="game-genre">Simulation</span>
+                    <div class="game-platforms">
+                        <i class="fab fa-windows" title="Available on Windows"></i>
                     </div>
                 </div>
             </div>
-            <div class="portofolio-container">
-                <div class="portofolio-item">
-                    <img src="porto2.png" alt="Project 2">
-                    <div class="overlay">
-                        <h3>The Galaxies</h3>
-                        <p>Karya 3D yang saya buat adalah pemandangan luar angkasa dengan latar belakang hitam penuh bintang. 
-                        Terdapat tiga galaksi spiral yang terlihat di gambar ini. Galaksi terbesar di bagian bawah tengah memiliki warna campuran biru dan ungu yang menakjubkan, 
-                        dengan lengan spiral yang berputar lembut. Di atasnya, terdapat dua galaksi yang lebih kecil; yang satu memiliki warna cokelat lembut, sementara yang lain berwarna ungu terang dengan inti hitam yang mencolok. 
-                        Keindahan dan keragaman warna dari galaksi-galaksi ini memberikan kesan magis dan misterius dari alam semesta yang luas.
-                    </p>
+        </div>
+
+        <div class="game-card">
+            <div class="game-thumbnail">
+                <a href="https://silaenn.itch.io/highway-hustle" target="_blank">
+                    <img src="https://img.itch.zone/aW1nLzE4NzQ5MzQ2LnBuZw==/347x500/MY4dJF.png" alt="Highway Hustle">
+                </a>
+            </div>
+            <div class="game-content">
+                <h3><a href="https://silaenn.itch.io/highway-hustle" target="_blank">Highway Hustle</a></h3>
+                <p class="game-tagline">Dodge, collect, and conquer the highway in this fast-paced, reflex-testing driving game!</p>
+                <div class="game-meta">
+                    <span class="game-genre">Racing</span>
+                    <div class="game-platforms">
+                        <i class="fab fa-android" title="Available on Android"></i>
                     </div>
                 </div>
             </div>
-            <div class="portofolio-container">
-                <div class="portofolio-item">
-                    <img src="porto3.png" alt="Project 3">
-                    <div class="overlay">
-                        <h3>Guardians of the Sea and Sky</h3>
-                        <p>Karya 3D yang saya buat adalah pemandangan menakjubkan dari armada laut saat matahari terbenam, dengan latar belakang pegunungan berbatu yang tertutup kabut. 
-                        Di latar depan, sebuah kapal induk yang tangguh diapit oleh dua kapal perang besar, masing-masing siap dan siaga untuk bertindak. Dek kapal induk dipenuhi dengan jet tempur, 
-                        menunjukkan kekuatan besar yang dimilikinya. Di atasnya, tiga jet tempur terbang melintasi langit, siluet ramping mereka terlihat jelas di tengah rona keemasan senja.
-                    </p>
-                    </div>
-                </div>
-            </div>
-            <div class="portofolio-container">
-                <div class="portofolio-item">
-                    <img src="porto4.png" alt="Project 4">
-                    <div class="overlay">
-                        <h3>Edge of Light</h3>
-                        <p>Karya 3D yang saya buat adalah Di tengah luasnya ruang angkasa yang sunyi, 
-                        Bumi terlihat begitu indah. Separuhnya terang disinari matahari, sementara separuh lainnya 
-                        tenggelam dalam bayangan malam. Garis tipis antara siang dan malam seolah membelah 
-                        planet ini, menciptakan harmoni yang abadi. Di antara gemerlap bintang-bintang, 
-                        Bumi mungkin terlihat kecil, namun di sanalah kehidupan bernafas, penuh cerita yang tak terhitung jumlahnya.
-                    </p>
-                    </div>
-                </div>
-            </div>
-    </div>
+        </div>
+        
+        </div>
+        </article>
+    </section>
     <div class="comment-section">
         <h2>Komentar</h2>
         <form id="comment-form">
             <input type="text" id="name" placeholder="Nama" required>
             <textarea id="comment" placeholder="Tulis komentar Anda..." required></textarea>
-            <button type="submit">Kirim Komentar</button>
+            <button type="submit">Submit Comment</button>
         </form>
         <div id="comment-container"></div>
     </div>
@@ -130,7 +193,7 @@
             <a class="social-button" href="https://open.spotify.com/user/4u8epov93doy9u436jarkjc5w?si=rBSD3lq6Toeub011xae1xw" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-spotify"></i> spotify</a>
         </p>
-        <p>&copy; 2024 Personal Blog | Copyright by Joo</p>
+        <p>&copy; 2025 Personal Blog | Copyright by Joo</p>
     </footer>
     <button id="back-to-top">⬆</button>
 </body>
