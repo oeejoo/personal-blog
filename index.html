@@ -1,217 +1,343 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blogger pribadi untuk berbagi cerita dan pengalaman">
-    <title>Personal Blog</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="querymobile.css">
-    <link rel="stylesheet" href="querytab.css">
-    <link rel="stylesheet" href="queryipad.css">
-    <script src="popup.js" defer></script>
-    <script src="scroll.js" defer></script>
-    <script src="load.js" defer></script>
-    <script src="btt.js" defer></script>
-    <script src="comment.js" defer></script>
-    <script src="viewcomment.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <div id="loading">Loading...</div>
-    <header>
-        <h1>Personal Blog</h1>
-    </header>
-    <nav>
-        <a class="button" href="#home"><i class="fas fa-home"></i> Home</a>
-        <a class="button" href="#about"><i class="fas fa-user"></i> About</a>
-        <a class="button" href="#portfolio"><i class="fas fa-pen"></i> Portfolio</a>
-        <a class="button" href="#games"><i class="fas fa-gamepad"></i> My Games</a>
-    </nav>
-    <section class="hero">
-        <h1>Welcome</h1>
-        <p>A place to share interesting stories and experiences.</p>
-        <a href="#portfolio" class="cta-button">Start Reading</a>
-    </section>
-    <div class="container">
-        <article id="home">
-            <h2><i class="fas fa-home"></i> Home</h2>
-            <p>Hello! Welcome to my Personal Blog, a place where I share my journey and exploration in the world of design, games, and 3D creativity.
-                As a university student who loves design and technology, I believe every idea has the potential to come to life. Here, you will find:
-                    <p>✨ 3D & Environment Design: Showcasing my latest projects.</p>
-                    <p>🎮 Game Design: Insights and experiences in creating engaging games.</p>
-                    <p>💡 Personal Reflections: Thoughts on hobbies, learning processes, and innovation.</p>
-        </article>
-        <article id="about">
-            <h2><i class="fas fa-user"></i> About me</h2>
-            <div class="about-content">
-                <img src="me.jpg" alt="Yoas Nevil Sandy Samudra" class="profile-photo" onclick="showPopup(this)">
-                <p>Hi! My name is Yoas Nevil Sandy Samudra, but you can call me Joo. I am a university student who loves design and technology.
-            On this blog, I share my experiences in the world of games, 3D Environment Design, and my other hobbies. Join my journey and
-            find new inspiration in every post!
-                </p>
-            </div>
-        </article>
-        <div id="popup-container" class="popup-hidden" onclick="closePopup()">
-            <img id="popup-image" src="" alt="Popup foto">
-        </div>
-    <section>
-    <article id="portfolio">
-        <h2><i class="fas fa-folder"></i> Portfolio</h2>
-        <div class="portofolio-container">
-            <div class="portofolio-item">
-                <img src="porto1.png" alt="Project 1">
-                <div class="overlay">
-                    <h3>The Blackhole</h3>
-                    <p>The 3D artwork I created is an artistic visualization of a black hole with an accretion disk surrounding it.
-                    At its center, the dark and mysterious black hole creates gravitational distortion, visible through the effect of light bending.
-                    The accretion disk, made of brightly glowing gas and dust, circles at high speed, emitting intense energy.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="portofolio-container">
-            <div class="portofolio-item">
-                <img src="porto2.png" alt="Project 2">
-                <div class="overlay">
-                    <h3>The Galaxies</h3>
-                    <p>The 3D artwork I created depicts an outer space scene with a black background filled with stars.
-                    There are three spiral galaxies visible in this image. The largest galaxy at the bottom center features a stunning blend of blue and purple colors,
-                    with gently swirling spiral arms. Above it, there are two smaller galaxies; one has a soft brown hue, while the other is bright purple with a striking black core.
-                    The beauty and diversity of colors from these galaxies create a magical and mysterious impression of the vast universe.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="portofolio-container">
-            <div class="portofolio-item">
-                <img src="porto3.png" alt="Project 3">
-                <div class="overlay">
-                    <h3>Guardians of the Sea and Sky</h3>
-                    <p>The 3D artwork I created is a stunning scene of a naval fleet at sunset, with a backdrop of rocky mountains shrouded in mist.
-                    In the foreground, a formidable aircraft carrier is flanked by two large warships, each ready and alert for action. The carrier's deck is filled with fighter jets,
-                    showcasing its immense power. Above, three fighter jets soar across the sky, their sleek silhouettes clearly visible against the golden hues of dusk.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="portofolio-container">
-            <div class="portofolio-item">
-                <img src="porto4.png" alt="Project 4">
-                <div class="overlay">
-                    <h3>Edge of Light</h3>
-                    <p>The 3D artwork I created depicts the Earth in the vast, silent expanse of space. 
-                    Half of the planet is illuminated by sunlight, while the other half is shrouded in the shadow of night. 
-                    A thin line between day and night seems to divide the planet, creating an eternal harmony. 
-                    Among the sparkling stars, Earth may appear small, but it is where life breathes, 
-                    full of countless untold stories.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="portofolio-container">
-            <div class="portofolio-item">
-                <img src="porto5.png" alt="Project 5">
-                <div class="overlay">
-                    <h3>The Fish</h3>
-                    <p>The 3D artwork I created features a Moorish Idol fish (Zanclus cornutus), known for its distinctive 
-                        yellow, black, and white coloration. This fish has a flat body shape with a long, prominent dorsal 
-                        fin and a small, pointed mouth. The plain teal background highlights the details and vibrant colors 
-                        of the fish.</p>
-                </div>
-            </div>
-        </div>
-    </article>
-    <article id="games">
-            <h2><i class="fas fa-gamepad" aria-hidden="true"></i> My Games</h2>
-            <p class="section-intro">
-                These are the games i have made. Click on any game to play it on itch.io. 
-            </p>
-
-            <div class="game-gallery">
-
-        <div class="game-card">
-            <div class="game-thumbnail">
-                <a href="https://silaenn.itch.io/kids-zaman-now" target="_blank">
-                    <img src="https://img.itch.zone/aW1nLzIxNzI2OTUyLnBuZw==/315x250%23c/mGIdgs.png" alt="Kids Zaman Now">
-                </a>
-            </div>
-            <div class="game-content">
-                <h3><a href="https://silaenn.itch.io/kids-zaman-now" target="_blank">Kids Zaman Now</a></h3>
-                <p class="game-tagline">"Kids Zaman Now" is a casual game that puts you in the shoes of a kid who just 
-                    got scolded by his mom for having a messy room.</p>
-                <div class="game-meta">
-                    <span class="game-genre">Simulation</span>
-                    <div class="game-platforms">
-                        <i class="fab fa-windows" title="Available on Windows"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-thumbnail">
-                <a href="https://silaenn.itch.io/highway-hustle" target="_blank">
-                    <img src="https://img.itch.zone/aW1nLzE4NzQ5MzQ2LnBuZw==/347x500/MY4dJF.png" alt="Highway Hustle">
-                </a>
-            </div>
-            <div class="game-content">
-                <h3><a href="https://silaenn.itch.io/highway-hustle" target="_blank">Highway Hustle</a></h3>
-                <p class="game-tagline">Dodge, collect, and conquer the highway in this fast-paced, reflex-testing driving game!</p>
-                <div class="game-meta">
-                    <span class="game-genre">Racing</span>
-                    <div class="game-platforms">
-                        <i class="fab fa-android" title="Available on Android"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        </div>
-
-        <section class="profile-cta-container container"> <div class="profile-cta-content">
-        <div class="profile-avatar-wrapper">
-            <img src="profile.jpg" alt="Your Profile Avatar" class="profile-avatar">
-        </div>
-        <div class="profile-text">
-            <h3>Find Me on Itch.io</h3>
-            <p>Follow my journey and discover more projects, prototypes, and game assets 
-                on my official page.</p>
-        </div>
-        <div class="profile-action">
-            <a href="https://oeejoo.itch.io/" target="_blank" class="profile-button">
-                <i class="fab fa-itch-io"></i> View My Profile
-            </a>
-        </div>
-        </div>
-        </section>
-
-        </article>
-    </section>
-    <div class="comment-section">
-        <h2>Komentar</h2>
-        <form id="comment-form">
-            <input type="text" id="name" placeholder="Nama" required>
-            <textarea id="comment" placeholder="Tulis komentar Anda..." required></textarea>
-            <button type="submit">Submit Comment</button>
-        </form>
-        <div id="comment-container"></div>
+<div class="dekstop">
+  <div
+    class="body"
+    style="
+      background: url(body0.png) center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    "
+  >
+    <div class="header">
+      <div class="heading-1">
+        <div class="personal-blog">Personal Blog</div>
+      </div>
     </div>
-    <footer>
-        <p>Follow me on</p>
-        <p>
-            <a class="social-button" href="https://www.instagram.com/oee.joo/" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i> instagram</a>
-            <a class="social-button" href="https://t.me/JooGTD" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-telegram"></i> telegram</a>
-            <a class="social-button" href="https://x.com/joo059990084387" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-twitter"></i> twitter</a>
-            <a class="social-button" href="https://github.com/oeejoo" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> github</a>
-            <a class="social-button" href="https://open.spotify.com/user/4u8epov93doy9u436jarkjc5w?si=rBSD3lq6Toeub011xae1xw" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-spotify"></i> spotify</a>
-        </p>
-        <p>&copy; 2025 Personal Blog | Copyright by Joo</p>
-    </footer>
-</body>
-</html>
+    <div class="nav">
+      <div class="link-margin">
+        <div class="link">
+          <div class="symbol"></div>
+          <div class="home">Home</div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+      <div class="link-margin">
+        <div class="link2">
+          <div class="symbol"></div>
+          <div class="about">About</div>
+          <div class="overlay2"></div>
+        </div>
+      </div>
+      <div class="link-margin">
+        <div class="link3">
+          <div class="symbol"></div>
+          <div class="portfolio">Portfolio</div>
+          <div class="overlay3"></div>
+        </div>
+      </div>
+      <div class="link-margin">
+        <div class="link4">
+          <div class="symbol"></div>
+          <div class="my-games">My Games</div>
+          <div class="overlay4"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="heading-1-margin">
+        <div class="heading-1-welcome">Welcome</div>
+      </div>
+      <div class="margin">
+        <div class="container">
+          <div class="a-place-to-share-interesting-stories-and-experiences">
+            A place to share interesting stories and experiences.
+          </div>
+        </div>
+      </div>
+      <div class="link-margin2">
+        <div class="link5">
+          <div class="start-reading">Start Reading</div>
+          <div class="overlay5"></div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay-border-shadow-overlay-blur">
+      <div class="article">
+        <div class="container2">
+          <div
+            class="hello-welcome-to-my-personal-blog-a-place-where-i-share-my-journey-and-exploration-in-the-world-of-design-games-and-3-d-creativity-as-a-university-student-who-loves-design-and-technology-i-believe-every-idea-has-the-potential-to-come-to-life-here-you-will-find"
+          >
+            Hello! Welcome to my Personal Blog, a place where I share my journey
+            and exploration in the world of design, games, and 3D creativity. As
+            a university student who loves design and technology, I believe
+            every idea has the potential to come to life. Here, you will find:
+          </div>
+        </div>
+        <div class="container3">
+          <div class="_3-d-environment-design-showcasing-my-latest-projects">
+            ✨ 3D &amp; Environment Design: Showcasing my latest projects.
+          </div>
+        </div>
+        <div class="container4">
+          <div
+            class="game-design-insights-and-experiences-in-creating-engaging-games"
+          >
+            🎮 Game Design: Insights and experiences in creating engaging games.
+          </div>
+        </div>
+        <div class="container5">
+          <div
+            class="personal-reflections-thoughts-on-hobbies-learning-processes-and-innovation"
+          >
+            💡 Personal Reflections: Thoughts on hobbies, learning processes,
+            and innovation.
+          </div>
+        </div>
+        <div class="heading-2">
+          <div class="symbol2"></div>
+          <div class="home2">Home</div>
+          <div class="gradient"></div>
+        </div>
+      </div>
+      <div class="article2">
+        <div class="heading-22">
+          <div class="symbol3"></div>
+          <div class="about-me">About me</div>
+          <div class="gradient2"></div>
+        </div>
+        <div class="container6">
+          <img
+            class="yoas-nevil-sandy-samudra"
+            src="yoas-nevil-sandy-samudra0.png"
+          />
+          <div class="container7">
+            <div
+              class="hi-my-name-is-yoas-nevil-sandy-samudra-but-you-can-call-me-joo-i-am-a-university-student-who-loves-design-and-technology-on-this-blog-i-share-my-experiences-in-the-world-of-games-3-d-environment-design-and-my-other-hobbies-join-my-journey-and-find-new-inspiration-in-every-post"
+            >
+              Hi! My name is Yoas Nevil Sandy Samudra, but you can call me Joo.
+              I am a university student who loves design and technology. On this
+              blog, I share my experiences in the world of games, 3D Environment
+              Design, and my other hobbies. Join my journey and find new
+              inspiration in every post!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section2">
+        <div class="article3">
+          <div class="heading-23">
+            <div class="symbol2"></div>
+            <div class="portfolio2">Portfolio</div>
+            <div class="gradient3"></div>
+          </div>
+          <div class="overlay-shadow">
+            <img class="project-1" src="project-10.png" />
+          </div>
+          <div class="overlay-shadow2">
+            <img class="project-2" src="project-20.png" />
+          </div>
+          <div class="overlay-shadow3">
+            <img class="project-3" src="project-30.png" />
+          </div>
+          <div class="overlay-shadow2">
+            <img class="project-4" src="project-40.png" />
+          </div>
+          <div class="overlay-shadow3">
+            <img class="project-5" src="project-50.png" />
+          </div>
+        </div>
+        <div class="article4">
+          <div class="container8">
+            <div
+              class="these-are-the-games-i-have-made-click-on-any-game-to-play-it-on-itch-io"
+            >
+              These are the games i have made. Click on any game to play it on
+              itch.io.
+            </div>
+          </div>
+          <div class="container9">
+            <div class="background-shadow">
+              <div class="background">
+                <div class="link6">
+                  <img class="kids-zaman-now" src="kids-zaman-now0.png" />
+                </div>
+              </div>
+              <div class="container10">
+                <div class="heading-3-margin">
+                  <div class="heading-3">
+                    <div class="link7">
+                      <div class="kids-zaman-now2">Kids Zaman Now</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container11">
+                  <div
+                    class="kids-zaman-now-is-a-casual-game-that-puts-you-in-the-shoes-of-a-kid-who-just-got-scolded-by-his-mom-for-having-a-messy-room"
+                  >
+                    &quot;Kids Zaman Now&quot; is a casual game that puts you in
+                    the shoes of a kid who
+                    <br />
+                    just got scolded by his mom for having a messy room.
+                  </div>
+                </div>
+                <div class="margin2">
+                  <div class="horizontal-border">
+                    <div class="container12">
+                      <div class="simulation">Simulation</div>
+                    </div>
+                    <div class="container13">
+                      <div class="symbol4"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="background-shadow">
+              <div class="background2">
+                <div class="link6">
+                  <img class="highway-hustle" src="highway-hustle0.png" />
+                </div>
+              </div>
+              <div class="container10">
+                <div class="heading-3-margin">
+                  <div class="heading-3">
+                    <div class="link7">
+                      <div class="highway-hustle2">Highway Hustle</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container11">
+                  <div
+                    class="dodge-collect-and-conquer-the-highway-in-this-fast-paced-reflex-testing-driving-game"
+                  >
+                    Dodge, collect, and conquer the highway in this fast-paced,
+                    reflex-testing
+                    <br />
+                    driving game!
+                  </div>
+                </div>
+                <div class="margin2">
+                  <div class="horizontal-border">
+                    <div class="container12">
+                      <div class="racing">Racing</div>
+                    </div>
+                    <div class="container13">
+                      <div class="symbol4"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="heading-2">
+            <div class="symbol2"></div>
+            <div class="my-games2">My Games</div>
+            <div class="gradient3"></div>
+          </div>
+          <div class="section3">
+            <div class="container14">
+              <div class="container15"></div>
+              <div class="container16">
+                <div class="heading-3">
+                  <div class="find-me-on-itch-io">Find Me on Itch.io</div>
+                </div>
+                <div class="container17">
+                  <div
+                    class="follow-my-journey-and-discover-more-projects-prototypes-and-game-assets-on-my-official-page"
+                  >
+                    Follow my journey and discover more projects, prototypes,
+                    and
+                    <br />
+                    game assets on my official page.
+                  </div>
+                </div>
+              </div>
+              <div class="container12">
+                <div class="link8">
+                  <div class="container18">
+                    <div class="symbol5"></div>
+                  </div>
+                  <div class="view-my-profile">View My Profile</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img class="your-profile-avatar" src="your-profile-avatar0.png" />
+        </div>
+      </div>
+      <div class="background-shadow2">
+        <div class="heading-24">
+          <div class="komentar">Komentar</div>
+        </div>
+        <div class="form">
+          <div class="input-margin">
+            <div class="input">
+              <div class="container19">
+                <div class="nama">Nama</div>
+              </div>
+            </div>
+          </div>
+          <div class="textarea-margin">
+            <div class="textarea">
+              <div class="container20">
+                <div class="tulis-komentar-anda">Tulis komentar Anda...</div>
+              </div>
+            </div>
+          </div>
+          <div class="button-margin">
+            <div class="button">
+              <div class="submit-comment">Submit Comment</div>
+              <div class="overlay6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container21">
+          <div class="follow-me-on">Follow me on</div>
+        </div>
+        <div class="container22">
+          <div class="link9">
+            <div class="container23">
+              <div class="symbol6"></div>
+            </div>
+            <div class="instagram">instagram</div>
+            <div class="overlay7"></div>
+          </div>
+          <div class="link10">
+            <div class="container23">
+              <div class="symbol6"></div>
+            </div>
+            <div class="telegram">telegram</div>
+            <div class="overlay8"></div>
+          </div>
+          <div class="link11">
+            <div class="container23">
+              <div class="symbol6"></div>
+            </div>
+            <div class="twitter">twitter</div>
+            <div class="overlay9"></div>
+          </div>
+          <div class="link12">
+            <div class="container23">
+              <div class="symbol6"></div>
+            </div>
+            <div class="github">github</div>
+            <div class="overlay10"></div>
+          </div>
+          <div class="link13">
+            <div class="container23">
+              <div class="symbol6"></div>
+            </div>
+            <div class="spotify">spotify</div>
+            <div class="overlay11"></div>
+          </div>
+        </div>
+        <div class="container21">
+          <div class="_2025-personal-blog-copyright-by-joo">
+            © 2025 Personal Blog | Copyright by Joo
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
