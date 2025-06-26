@@ -1,4 +1,4 @@
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     body {
         font-size: 14px;
     }
@@ -56,5 +56,18 @@
 
     #popup-container::after {
         font-size: 0.8rem;
+    }
+
+    .profile-cta-content {
+        flex-direction: column; 
+        text-align: center;  
+    }
+
+    .profile-text p {
+        max-width: 100%; 
+    }
+
+    .profile-action {
+        margin-top: 15px; 
     }
 }
