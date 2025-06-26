@@ -314,15 +314,6 @@ nav a:hover::before {
     animation: fadeInDown 2s ease-in-out;
 }
 
-.hero p {
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 600px;
-    text-align: center;
-    margin-bottom: 20px;
-    animation: fadeInDown 2s ease-in-out;
-}
-
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -332,6 +323,32 @@ nav a:hover::before {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #1DB954, #4ccece);
+    color: white;
+    border: none;
+    border-radius: 80px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 1rem;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#back-to-top:hover {
+    transform: scale(1.1);
 }
 
 #loading {
@@ -719,7 +736,7 @@ footer a:hover .fa-spotify {
     background-color: #383838;
     border-radius: 12px;
     padding: 25px 30px;
-    margin-top: 80px;
+    margin-top: 40px;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
