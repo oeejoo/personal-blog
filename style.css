@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: "Poppins-Bold", sans-serif;
+    font-family: 'poppins', sans-serif;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('background1.jpg') no-repeat center/cover;
     background-attachment: fixed;
     min-height: 100vh;
@@ -44,6 +44,27 @@ header a {
 header h1 {
     margin: 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'poppins', sans-serif;
+    color: #fff;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: header-fade-in 1s ease-out forwards;
+}
+
+@keyframes header-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1:hover {
+    transform: scale(1.1);
 }
 
 header h1, article h2 {
@@ -68,6 +89,7 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.2rem;
+    font-family: 'poppins', sans-serif;
     transition:transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
@@ -274,6 +296,7 @@ nav a:hover::before {
     color: #cda8e2;
     text-decoration: none;
     font-size: 1.4rem;
+    font-family: 'poppins', sans-serif;
     transition: color 0.2s ease;
 }
 
@@ -287,6 +310,7 @@ nav a:hover::before {
     line-height: 1.5;
     margin: 0;
     flex-grow: 1; 
+    font-family: 'poppins', sans-serif;
 }
 
 .game-meta {
@@ -302,27 +326,35 @@ nav a:hover::before {
 .game-genre {
     font-size: 0.9rem;
     font-weight: 500;
+    font-family: 'poppins', sans-serif;
 }
 
 .game-platforms i {
     font-size: 1.3rem; 
     margin-left: 10px; 
+    font-family: 'poppins', sans-serif;
 }
 
 .hero {
     color: #fff;
     padding: 100px 20px;
     position: relative;
-    /*text-align: center;*/
+
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .hero h1 {
-    font-size: 5rem;
-    margin-bottom: 10px;
-    animation: fadeInDown 2s ease-in-out;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-up 1.2s ease-out forwards,
+               pulse-glow 3s ease-in-out infinite 2s;
 }
 
 .hero p {
@@ -330,18 +362,30 @@ nav a:hover::before {
     line-height: 1.6;
     max-width: 600px;
     text-align: center;
+    font-family: 'poppins', sans-serif;
     margin-bottom: 20px;
     animation: fadeInDown 2s ease-in-out;
 }
 
-@keyframes fadeInDown {
-    0% {
+@keyframes fade-up {
+    from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(20px);
     }
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(214, 104, 181, 0.8), 0 0 20px rgba(214, 104, 181, 0.4);
+    }
+    50% {
+        transform: scale(1.01);
+        text-shadow: 0 0 15px rgba(244, 84, 167, 0.9), 0 0 30px rgba(244, 84, 167, 0.6);
     }
 }
 
@@ -438,6 +482,7 @@ article:hover {
 article h2 {
     color: #e0e0e0;
     font-size: 1.8rem;
+    font-family: 'poppins', sans-serif;
     margin-bottom: 15px;
     position: relative;
     padding-bottom: 10px;
@@ -811,6 +856,7 @@ footer a:hover .fa-spotify {
     margin: 0;
     color: #b0b0b0;
     font-size: 1rem;
+    font-family: 'poppins', sans-serif;
     max-width: 450px;
 }
 
