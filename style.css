@@ -44,6 +44,25 @@ header a {
 header h1 {
     margin: 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease;
+    display: inline-block;
+
+    background: linear-gradient(90deg, #a054b1, #d668b5, #f454a7, #d668b5, #a054b1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% auto;
+    animation: running-colors 8s ease-in-out infinite;
+}
+
+@keyframes running-colors {
+    to{
+        background-position: 400% center;
+    }
+}
+
+header h1:hover {
+    transform: scale(1.1);
 }
 
 header h1, article h2 {
@@ -325,8 +344,22 @@ nav a:hover::before {
 }
 
 .hero h1 {
-    font-size: 5rem;
-    margin-bottom: 10px;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-up 1.2s ease-out forwards,
+               pulse-glow 3s ease-in-out infinite 2s;
+}
+
+.hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 20px;
     animation: fadeInDown 2s ease-in-out;
 }
 
@@ -338,6 +371,17 @@ nav a:hover::before {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(214, 104, 181, 0.8), 0 0 20px rgba(214, 104, 181, 0.4);
+    }
+    50% {
+        transform: scale(1.01);
+        text-shadow: 0 0 15px rgba(244, 84, 167, 0.9), 0 0 30px rgba(244, 84, 167, 0.6);
     }
 }
 
