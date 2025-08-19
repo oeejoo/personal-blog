@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blogger pribadi untuk berbagi cerita dan pengalaman">
     <title>Personal Blog</title>
+
+    <link rel="icon" href="coding.png" type="image/x-icon">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="querymobile.css">
     <link rel="stylesheet" href="querytab.css">
@@ -15,8 +18,14 @@
     <script src="btt.js" defer></script>
     <script src="comment.js" defer></script>
     <script src="viewcomment.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <div id="loading">Loading...</div>
     <header>
@@ -167,25 +176,42 @@
             </div>
         </div>
 
+        <div class="game-card">
+            <div class="game-thumbnail">
+                <a href="https://alqmr.itch.io/press-in" target="_blank">
+                    <img src="https://img.itch.zone/aW1nLzIyNTU5NjUwLnBuZw==/315x250%23c/c6PETo.png" alt="Highway Hustle">
+                </a>
+            </div>
+            <div class="game-content">
+                <h3><a href="https://alqmr.itch.io/press-in" target="_blank">Press-ins</a></h3>
+                <p class="game-tagline">Fast-paced memory and reaction game where players must step on the correct buttons corresponding to lights that turn on.</p>
+                <div class="game-meta">
+                    <span class="game-genre">Platformer</span>
+                    <div class="game-platforms">
+                        <i class="fab fa-windows" title="Available on Windows"></i>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <section class="profile-cta-container container card">
-    <div class="profile-cta-content">
-        <div class="profile-avatar-orbit">
-            <img src="profile.jpg" alt="Your Profile Avatar" class="profile-avatar">
-        </div>
-        <div class="profile-text">
-            <h3>Find Me on Itch.io</h3>
-            <p>Follow my journey and discover more projects, prototypes, and game assets
-                on my official page.</p>
-        </div>
-        <div class="profile-action">
-            <a href="https://oeejoo.itch.io/" target="_blank" rel="noopener noreferrer" class="profile-button">
-                <i class="fab fa-itch-io"></i> View My Profile
-            </a>
-        </div>
-    </div>
-</section>
+        <section class="profile-cta-container">
+            <div class="profile-cta-content">
+                <div class="profile-avatar-wrapper">
+                    <img src="https://img.itch.zone/aW1nLzIxNzk5MTQ4LmpwZw==/35x35%23/XbXM%2BV.jpg" 
+                    alt="Your Profile Avatar" class="profile-avatar">
+                </div>
+                <div class="profile-text">
+                    <h3>Find Me on Itch.io</h3>
+                    <p>Follow my journey and discover more projects, prototypes, and game assets 
+                        on my official page.</p>
+                </div>
+                <div class="profile-action">
+                    <a href="https://oeejoo.itch.io/" target="_blank" class="profile-button">
+                        <i class="fab fa-itch"></i> View My Profile
+                    </a>
+                </div>
+            </div>
+        </section>
 
         </article>
     </section>
