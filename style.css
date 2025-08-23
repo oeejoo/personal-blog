@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins', sans-serif;
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('background1.jpg') no-repeat center/cover;
     background-attachment: fixed;
     min-height: 100vh;
@@ -44,20 +44,22 @@ header a {
 header h1 {
     margin: 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'poppins', sans-serif;
+    color: #fff;
 
-    transition: transform 0.3s ease;
-    display: inline-block;
-
-    background: linear-gradient(90deg, #a054b1, #d668b5, #f454a7, #d668b5, #a054b1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400% auto;
-    animation: running-colors 8s ease-in-out infinite;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: header-fade-in 1s ease-out forwards;
 }
 
-@keyframes running-colors {
-    to{
-        background-position: 400% center;
+@keyframes header-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -347,6 +349,7 @@ nav a:hover::before {
     font-size: 4rem;
     font-weight: bold;
     color: #fff;
+    font-family: 'poppins', sans-serif;
 
     opacity: 0;
     transform: translateY(20px);
@@ -359,6 +362,7 @@ nav a:hover::before {
     line-height: 1.6;
     max-width: 600px;
     text-align: center;
+    font-family: 'poppins', sans-serif;
     margin-bottom: 20px;
     animation: fadeInDown 2s ease-in-out;
 }
