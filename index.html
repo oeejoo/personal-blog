@@ -3,260 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blogger pribadi untuk berbagi cerita dan pengalaman">
-    <title>Personal Blog</title>
-
-    <link rel="icon" href="coding.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="querymobile.css">
-    <link rel="stylesheet" href="querytab.css">
-    <link rel="stylesheet" href="queryipad.css">
-    <script src="popup.js" defer></script>
-    <script src="scroll.js" defer></script>
-    <script src="load.js" defer></script>
-    <script src="btt.js" defer></script>
-    <script src="comment.js" defer></script>
-    <script src="viewcomment.js"></script>
-
+    <title>Yoas Nevil | 3D Artist & Game Developer</title>
+    <meta name="description" content="Portfolio of Yoas Nevil Sandy Samudra, a 3D artist and game developer working in Blender and Unity 6.">
+    <meta property="og:title" content="Yoas Nevil | 3D Artist & Game Developer">
+    <meta property="og:description" content="3D environments in Blender and games in Unity 6.">
+    <meta property="og:image" content="https://oeejoo.github.io/personal-blog/assets/porto1.png">
+    <link rel="icon" href="coding.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
 </head>
-
 <body>
-    <div id="loading">Loading...</div>
-    <header>
-        <h1>Personal Blog</h1>
+    <header class="site-header">
+        <a class="brand" href="#top">Yoas Nevil</a>
+        <nav aria-label="Main">
+            <a href="#works">3D Works</a>
+            <a href="#games">Games</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a class="button" href="#home"><i class="fas fa-home"></i> Home</a>
-        <a class="button" href="#about"><i class="fas fa-user"></i> About</a>
-        <a class="button" href="#portfolio"><i class="fas fa-pen"></i> Portfolio</a>
-        <a class="button" href="#games"><i class="fas fa-gamepad"></i> My Games</a>
-    </nav>
-    <section class="hero">
-        <h1>Welcome</h1>
-        <p>A place to share interesting stories and experiences.</p>
-        <a href="#portfolio" class="cta-button">Start Reading</a>
-    </section>
-    <div class="container">
-        <article id="home">
-            <h2><i class="fas fa-home"></i> Home</h2>
-            <p>Hello! Welcome to my Personal Blog, a place where I share my journey and exploration in the world of design, games, and 3D creativity.
-                As a university student who loves design and technology, I believe every idea has the potential to come to life. Here, you will find:
-                    <p>✨ 3D & Environment Design: Showcasing my latest projects.</p>
-                    <p>🎮 Game Design: Insights and experiences in creating engaging games.</p>
-                    <p>💡 Personal Reflections: Thoughts on hobbies, learning processes, and innovation.</p>
-        </article>
-        <article id="about">
-            <h2><i class="fas fa-user"></i> About me</h2>
-            <div class="about-content">
-                <img src="me.jpg" alt="Yoas Nevil Sandy Samudra" class="profile-photo" onclick="showPopup(this)">
-                <p>Hi! My name is Yoas Nevil Sandy Samudra, but you can call me Joo. I am a university student who loves design and technology.
-            On this blog, I share my experiences in the world of games, 3D Environment Design, and my other hobbies. Join my journey and
-            find new inspiration in every post!
-                </p>
-            </div>
-        </article>
-        <div id="popup-container" class="popup-hidden" onclick="closePopup()">
-            <img id="popup-image" src="" alt="Popup foto">
-        </div>
-    <section>
-    <article id="portfolio">
-        <h2><i class="fas fa-folder"></i> Portfolio</h2>
-        <div class="portofolio-container">
-            <div class="portofolio-item">
-                <img src="porto1.png" alt="Project 1">
-                <div class="overlay">
-                    <h3>The Blackhole</h3>
-                    <p>The 3D artwork I created is an artistic visualization of a black hole with an accretion disk surrounding it.
-                    At its center, the dark and mysterious black hole creates gravitational distortion, visible through the effect of light bending.
-                    The accretion disk, made of brightly glowing gas and dust, circles at high speed, emitting intense energy.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="portofolio-container">
-            <div class="portofolio-item">
-                <img src="porto2.png" alt="Project 2">
-                <div class="overlay">
-                    <h3>The Galaxies</h3>
-                    <p>The 3D artwork I created depicts an outer space scene with a black background filled with stars.
-                    There are three spiral galaxies visible in this image. The largest galaxy at the bottom center features a stunning blend of blue and purple colors,
-                    with gently swirling spiral arms. Above it, there are two smaller galaxies; one has a soft brown hue, while the other is bright purple with a striking black core.
-                    The beauty and diversity of colors from these galaxies create a magical and mysterious impression of the vast universe.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="portofolio-container">
-            <div class="portofolio-item">
-                <img src="porto3.png" alt="Project 3">
-                <div class="overlay">
-                    <h3>Guardians of the Sea and Sky</h3>
-                    <p>The 3D artwork I created is a stunning scene of a naval fleet at sunset, with a backdrop of rocky mountains shrouded in mist.
-                    In the foreground, a formidable aircraft carrier is flanked by two large warships, each ready and alert for action. The carrier's deck is filled with fighter jets,
-                    showcasing its immense power. Above, three fighter jets soar across the sky, their sleek silhouettes clearly visible against the golden hues of dusk.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="portofolio-container">
-            <div class="portofolio-item">
-                <img src="porto4.png" alt="Project 4">
-                <div class="overlay">
-                    <h3>Edge of Light</h3>
-                    <p>The 3D artwork I created depicts the Earth in the vast, silent expanse of space. 
-                    Half of the planet is illuminated by sunlight, while the other half is shrouded in the shadow of night. 
-                    A thin line between day and night seems to divide the planet, creating an eternal harmony. 
-                    Among the sparkling stars, Earth may appear small, but it is where life breathes, 
-                    full of countless untold stories.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="portofolio-container">
-            <div class="portofolio-item">
-                <img src="porto5.png" alt="Project 5">
-                <div class="overlay">
-                    <h3>The Fish</h3>
-                    <p>The 3D artwork I created features a Moorish Idol fish (Zanclus cornutus), known for its distinctive 
-                        yellow, black, and white coloration. This fish has a flat body shape with a long, prominent dorsal 
-                        fin and a small, pointed mouth. The plain teal background highlights the details and vibrant colors 
-                        of the fish.</p>
-                </div>
-            </div>
-        </div>
-    </article>
-    <article id="games">
-            <h2><i class="fas fa-gamepad" aria-hidden="true"></i> My Games</h2>
-            <p class="section-intro">
-                These are the games i have made. Click on any game to play it on itch.io. 
-            </p>
 
-            <div class="game-gallery">
-
-        <div class="game-card">
-            <div class="game-thumbnail">
-                <a href="https://silaenn.itch.io/kids-zaman-now" target="_blank">
-                    <img src="https://img.itch.zone/aW1nLzIxNzI2OTUyLnBuZw==/315x250%23c/mGIdgs.png" alt="Kids Zaman Now">
-                </a>
+    <main id="top">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>3D artist and game developer</h1>
+                <p>I'm Yoas Nevil Sandy Samudra. I build 3D environments in Blender and make games in Unity 6. I'm looking for an internship.</p>
+                <div class="actions">
+                    <a class="btn" href="#works">View my work</a>
+                    <a class="btn btn-ghost" href="#contact">Contact me</a>
+                </div>
             </div>
-            <div class="game-content">
-                <h3><a href="https://silaenn.itch.io/kids-zaman-now" target="_blank">Kids Zaman Now</a></h3>
-                <p class="game-tagline">"Kids Zaman Now" is a casual game that puts you in the shoes of a kid who just 
-                    got scolded by his mom for having a messy room.</p>
-                <div class="game-meta">
-                    <span class="game-genre">Simulation</span>
-                    <div class="game-platforms">
-                        <i class="fab fa-windows" title="Available on Windows"></i>
+        </section>
+
+        <section id="works" class="section">
+            <h2>3D works</h2>
+            <p class="intro">Personal projects made in Blender. Click an image to view it larger.</p>
+            <div class="works">
+                <figure class="work work-featured">
+                    <button type="button" data-lightbox data-title="The Blackhole">
+                        <img src="assets/porto1.png" alt="A black hole bending light, surrounded by a glowing accretion disk" loading="lazy">
+                    </button>
+                    <figcaption>
+                        <h3>The Blackhole</h3>
+                        <p>A black hole with a glowing accretion disk, showing light bending around its dark center.</p>
+                    </figcaption>
+                </figure>
+                <figure class="work">
+                    <button type="button" data-lightbox data-title="The Galaxies">
+                        <img src="assets/porto2.png" alt="Three spiral galaxies in blue, purple and brown against a starfield" loading="lazy">
+                    </button>
+                    <figcaption>
+                        <h3>The Galaxies</h3>
+                        <p>Three spiral galaxies with different colors floating in a starfield.</p>
+                    </figcaption>
+                </figure>
+                <figure class="work">
+                    <button type="button" data-lightbox data-title="Guardians of the Sea and Sky">
+                        <img src="assets/porto3.png" alt="A naval fleet with an aircraft carrier at sunset in front of misty mountains" loading="lazy">
+                    </button>
+                    <figcaption>
+                        <h3>Guardians of the Sea and Sky</h3>
+                        <p>A naval fleet at sunset with an aircraft carrier, two warships and fighter jets overhead.</p>
+                    </figcaption>
+                </figure>
+                <figure class="work">
+                    <button type="button" data-lightbox data-title="Edge of Light">
+                        <img src="assets/porto4.png" alt="Earth in space, half lit by the sun and half in night" loading="lazy">
+                    </button>
+                    <figcaption>
+                        <h3>Edge of Light</h3>
+                        <p>Earth split between day and night, seen from space.</p>
+                    </figcaption>
+                </figure>
+                <figure class="work">
+                    <button type="button" data-lightbox data-title="The Fish">
+                        <img src="assets/porto5.png" alt="A yellow, black and white Moorish Idol fish on a teal background" loading="lazy">
+                    </button>
+                    <figcaption>
+                        <h3>The Fish</h3>
+                        <p>A Moorish Idol (Zanclus cornutus) on a plain teal background.</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="games" class="section">
+            <h2>Games</h2>
+            <p class="intro">Team projects built in Unity 6. Each card lists my role. Select a game to play it on itch.io.</p>
+            <div class="games">
+                <article class="game">
+                    <a class="game-thumb" href="https://silaenn.itch.io/kids-zaman-now" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.itch.zone/aW1nLzIxNzI2OTUyLnBuZw==/315x250%23c/mGIdgs.png" alt="Kids Zaman Now cover art" loading="lazy">
+                    </a>
+                    <div class="game-body">
+                        <h3><a href="https://silaenn.itch.io/kids-zaman-now" target="_blank" rel="noopener noreferrer">Kids Zaman Now</a></h3>
+                        <p class="role">My role: 3D artist</p>
+                        <p>A casual game where you play a kid who was just scolded by his mom for having a messy room.</p>
+                        <p class="meta"><span>Simulation</span> <span>Unity 6</span> <span>Windows</span></p>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-thumbnail">
-                <a href="https://silaenn.itch.io/highway-hustle" target="_blank">
-                    <img src="https://img.itch.zone/aW1nLzE4NzQ5MzQ2LnBuZw==/347x500/MY4dJF.png" alt="Highway Hustle">
-                </a>
-            </div>
-            <div class="game-content">
-                <h3><a href="https://silaenn.itch.io/highway-hustle" target="_blank">Highway Hustle</a></h3>
-                <p class="game-tagline">Dodge, collect, and conquer the highway in this fast-paced, reflex-testing driving game!</p>
-                <div class="game-meta">
-                    <span class="game-genre">Racing</span>
-                    <div class="game-platforms">
-                        <i class="fab fa-android" title="Available on Android"></i>
+                </article>
+                <article class="game">
+                    <a class="game-thumb" href="https://silaenn.itch.io/highway-hustle" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.itch.zone/aW1nLzE4NzQ5MzQ2LnBuZw==/347x500/MY4dJF.png" alt="Highway Hustle cover art" loading="lazy">
+                    </a>
+                    <div class="game-body">
+                        <h3><a href="https://silaenn.itch.io/highway-hustle" target="_blank" rel="noopener noreferrer">Highway Hustle</a></h3>
+                        <p class="role">My role: 2D artist</p>
+                        <p>Dodge, collect and conquer the highway in this fast-paced, reflex-testing driving game.</p>
+                        <p class="meta"><span>Racing</span> <span>Unity 6</span> <span>Android</span></p>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-thumbnail">
-                <a href="https://alqmr.itch.io/press-in" target="_blank">
-                    <img src="https://img.itch.zone/aW1nLzIyNTU5NjUwLnBuZw==/315x250%23c/c6PETo.png" alt="Highway Hustle">
-                </a>
-            </div>
-            <div class="game-content">
-                <h3><a href="https://alqmr.itch.io/press-in" target="_blank">Press-ins</a></h3>
-                <p class="game-tagline">Fast-paced memory and reaction game where players must step on the correct buttons corresponding to lights that turn on.</p>
-                <div class="game-meta">
-                    <span class="game-genre">Platformer</span>
-                    <div class="game-platforms">
-                        <i class="fab fa-windows" title="Available on Windows"></i>
+                </article>
+                <article class="game">
+                    <a class="game-thumb" href="https://alqmr.itch.io/press-in" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.itch.zone/aW1nLzIyNTU5NjUwLnBuZw==/315x250%23c/c6PETo.png" alt="Press-ins cover art" loading="lazy">
+                    </a>
+                    <div class="game-body">
+                        <h3><a href="https://alqmr.itch.io/press-in" target="_blank" rel="noopener noreferrer">Press-ins</a></h3>
+                        <p class="role">My role: 3D artist</p>
+                        <p>A fast memory and reaction game: step on the buttons that match the lights that turn on.</p>
+                        <p class="meta"><span>Platformer</span> <span>Unity 6</span> <span>Windows</span></p>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="game-card">
-            <div class="game-thumbnail">
-                <a href="https://rozl.itch.io/pens-vs-zombies" target="_blank">
-                    <img src="https://img.itch.zone/aW1nLzIyNjAxNTMwLnBuZw==/315x250%23c/XJegeW.png" alt="Highway Hustle">
-                </a>
-            </div>
-            <div class="game-content">
-                <h3><a href="https://rozl.itch.io/pens-vs-zombies" target="_blank">PENS vs Zombies</a></h3>
-                <p class="game-tagline">You must defend the campus of PENS from waves of mischievous invader.</p>
-                <div class="game-meta">
-                    <span class="game-genre">Strategy</span>
-                    <div class="game-platforms">
-                        <i class="fab fa-windows" title="Available on Windows"></i>
+                </article>
+                <article class="game">
+                    <a class="game-thumb" href="https://rozl.itch.io/pens-vs-zombies" target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.itch.zone/aW1nLzIyNjAxNTMwLnBuZw==/315x250%23c/XJegeW.png" alt="PENS vs Zombies cover art" loading="lazy">
+                    </a>
+                    <div class="game-body">
+                        <h3><a href="https://rozl.itch.io/pens-vs-zombies" target="_blank" rel="noopener noreferrer">PENS vs Zombies</a></h3>
+                        <p class="role">My role: 3D artist</p>
+                        <p>Defend the PENS campus from waves of mischievous invaders.</p>
+                        <p class="meta"><span>Strategy</span> <span>Unity 6</span> <span>Windows</span></p>
                     </div>
+                </article>
+            </div>
+            <p class="more"><a href="https://oeejoo.itch.io/" target="_blank" rel="noopener noreferrer">See all my projects on itch.io</a></p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About</h2>
+            <div class="about">
+                <img src="assets/me.jpg" alt="Portrait of Yoas Nevil Sandy Samudra" class="portrait" loading="lazy">
+                <div>
+                    <p>Hi, I'm Yoas Nevil Sandy Samudra, but you can call me Joo. I'm a university student who loves design and technology.</p>
+                    <p>I work as a 3D artist on game projects and make 3D environment art in Blender. I also draw 2D art when a project needs it.</p>
+                    <h3>Skills and tools</h3>
+                    <ul class="skills">
+                        <li>Blender</li>
+                        <li>Unity 6</li>
+                        <li>3D modeling</li>
+                        <li>Environment design</li>
+                        <li>2D art</li>
+                        <!-- TODO: add more skills here, for example texturing, rigging, animation -->
+                    </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        </div>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p class="intro">I'm open to internships in 3D art and game development. The fastest way to reach me is email.</p>
+            <div class="actions">
+                <a class="btn" href="mailto:yoasnevilsandy@gmail.com">yoasnevilsandy@gmail.com</a>
+                <a class="btn btn-ghost" href="https://github.com/oeejoo" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="btn btn-ghost" href="https://oeejoo.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a>
+                <!-- TODO: uncomment when your LinkedIn is ready
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/YOUR-NAME" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                -->
+            </div>
+        </section>
+    </main>
 
-        <section class="profile-cta-container container card">
-    <div class="profile-cta-content">
-        <div class="profile-avatar-orbit">
-            <img src="profile.jpg" alt="Your Profile Avatar" class="profile-avatar">
-        </div>
-        <div class="profile-text">
-            <h3>Find Me on Itch.io</h3>
-            <p>Follow my journey and discover more projects, prototypes, and game assets
-                on my official page.</p>
-        </div>
-        <div class="profile-action">
-            <a href="https://oeejoo.itch.io/" target="_blank" rel="noopener noreferrer" class="profile-button">
-                <i class="fab fa-itch-io"></i> View My Profile
-            </a>
-        </div>
-    </div>
-</section>
+    <footer class="site-footer">
+        <p>&copy; <span id="year">2026</span> Yoas Nevil Sandy Samudra</p>
+    </footer>
 
-        </article>
-    </section>
-    <div class="comment-section">
-        <h2>Komentar</h2>
-        <form id="comment-form">
-            <input type="text" id="name" placeholder="Nama" required>
-            <textarea id="comment" placeholder="Tulis komentar Anda..." required></textarea>
-            <button type="submit">Submit Comment</button>
-        </form>
-        <div id="comment-container"></div>
-    </div>
-    <footer>
-        <p>Follow me on</p>
-        <p>
-            <a class="social-button" href="https://www.instagram.com/oee.joo/" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i> instagram</a>
-            <a class="social-button" href="https://t.me/JooGTD" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-telegram"></i> telegram</a>
-            <a class="social-button" href="https://x.com/joo059990084387" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-twitter"></i> twitter</a>
-            <a class="social-button" href="https://github.com/oeejoo" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i> github</a>
-            <a class="social-button" href="https://open.spotify.com/user/4u8epov93doy9u436jarkjc5w?si=rBSD3lq6Toeub011xae1xw" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-spotify"></i> spotify</a>
-        </p>
-        <p>&copy; 2025 Personal Blog | Copyright by Joo</p>
+    <dialog id="lightbox" aria-label="Image viewer">
+        <button type="button" class="close" aria-label="Close image">&times;</button>
+        <img src="" alt="">
+        <p></p>
+    </dialog>
 </body>
 </html>

@@ -1,0 +1,150 @@
+/* 1. Variables */
+:root {
+    --pink: #e55a9b;
+    --purple: #8a2be2;
+    --gradient: linear-gradient(45deg, var(--pink), var(--purple));
+    --bg: #14111a;
+    --surface: #211c2b;
+    --line: rgba(255, 255, 255, 0.12);
+    --text: #f0edf5;
+    --muted: #b8b1c4;
+    --link: #d9b8f0;
+    --radius: 10px;
+    --max: 1100px;
+}
+
+/* 2. Reset and base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(rgba(20, 17, 26, 0.9), rgba(20, 17, 26, 0.94)), url('../assets/background1.jpg') center / cover no-repeat;
+}
+img { display: block; max-width: 100%; }
+a { color: var(--link); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+h1, h2, h3 { line-height: 1.2; }
+p { max-width: 65ch; }
+
+/* 3. Layout */
+.section { max-width: var(--max); margin: 0 auto; padding: 56px 20px; }
+.section h2 { font-size: 1.9rem; margin-bottom: 8px; }
+.intro { color: var(--muted); margin-bottom: 28px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* 4. Components */
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: var(--gradient);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(138, 43, 226, 0.35); }
+.btn-ghost { background: transparent; border: 2px solid var(--pink); }
+
+/* 5. Header and navigation */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px 20px;
+    padding: 12px 20px;
+    background: rgba(20, 17, 26, 0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+}
+.brand { color: #fff; font-weight: 700; text-decoration: none; }
+.site-header nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.site-header nav a { color: var(--muted); font-size: 0.9rem; text-decoration: none; }
+.site-header nav a:hover { color: #fff; }
+
+/* 6. Hero (the one bold moment) */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 80px 20px 56px;
+    background: linear-gradient(to top, var(--bg) 4%, rgba(20, 17, 26, 0.25) 70%), url('../assets/porto1.png') center / cover no-repeat;
+}
+.hero-text { max-width: var(--max); width: 100%; margin: 0 auto; animation: rise 0.9s ease-out both; }
+.hero h1 { font-size: clamp(2.2rem, 7vw, 4.5rem); max-width: 14ch; margin-bottom: 16px; }
+.hero p { color: var(--text); margin-bottom: 24px; }
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+/* 7. 3D works */
+.works { display: grid; gap: 28px; }
+.work button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: var(--radius); overflow: hidden; }
+.work img { width: 100%; height: auto; }
+.work figcaption { padding-top: 10px; }
+.work h3 { font-size: 1.1rem; }
+.work p { color: var(--muted); font-size: 0.92rem; }
+
+/* 8. Games */
+.games { display: grid; gap: 20px; }
+.game { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.game-thumb { display: block; aspect-ratio: 16 / 9; background: #17131f; }
+.game-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.game-body { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex-grow: 1; }
+.game h3 { font-size: 1.15rem; }
+.game h3 a { color: var(--text); text-decoration: none; }
+.game h3 a:hover { color: var(--link); }
+.role { color: var(--pink); font-weight: 600; }
+.game-body > p:not(.role):not(.meta) { color: var(--muted); font-size: 0.92rem; flex-grow: 1; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.85rem; color: var(--muted); padding-top: 10px; border-top: 1px solid var(--line); }
+.more { margin-top: 24px; }
+
+/* 9. About */
+.about { display: grid; gap: 24px; }
+.about p + p { margin-top: 12px; }
+.portrait { width: 200px; height: 200px; object-fit: cover; border-radius: var(--radius); }
+.about h3 { margin: 24px 0 10px; font-size: 1.1rem; }
+.skills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+.skills li { padding: 4px 14px; border: 1px solid var(--line); border-radius: 30px; background: var(--surface); font-size: 0.9rem; }
+
+/* 10. Footer */
+.site-footer { padding: 28px 20px; text-align: center; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); }
+
+/* 11. Lightbox */
+#lightbox { margin: auto; max-width: 94vw; max-height: 94vh; padding: 12px; background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius); cursor: zoom-out; }
+#lightbox::backdrop { background: rgba(0, 0, 0, 0.85); }
+#lightbox img { max-width: 100%; max-height: 80vh; margin: 0 auto; }
+#lightbox p { padding-top: 8px; text-align: center; }
+#lightbox .close { position: absolute; top: 4px; right: 10px; border: 0; background: none; color: var(--text); font-size: 2rem; line-height: 1; cursor: pointer; }
+
+/* 12. Responsive (mobile first) */
+@media (min-width: 768px) {
+    .site-header { padding: 14px 40px; }
+    .works { grid-template-columns: repeat(2, 1fr); }
+    .work-featured { grid-column: 1 / -1; }
+    .games { grid-template-columns: repeat(2, 1fr); }
+    .about { grid-template-columns: 200px 1fr; gap: 40px; }
+}
+@media (min-width: 1024px) {
+    .games { grid-template-columns: repeat(4, 1fr); }
+    .works { grid-template-columns: repeat(3, 1fr); }
+    .work-featured { grid-column: span 3; }
+}
+
+/* 13. Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .hero-text { animation: none; }
+    .btn { transition: none; }
+}
