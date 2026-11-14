@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js" defer></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
     <header class="site-header">
@@ -29,7 +30,7 @@
     <main id="top">
         <section class="hero">
             <div class="hero-text">
-                <h1>3D artist and game developer</h1>
+                <h1>3D Artist and Game Developer</h1>
                 <p>I'm Yoas Nevil Sandy Samudra. I build 3D environments in Blender and make games in Unity 6. I'm looking for an internship.</p>
                 <div class="actions">
                     <a class="btn" href="#works">View my work</a>
@@ -40,33 +41,134 @@
 
         <section id="works" class="section">
             <h2>3D works</h2>
-            <p class="intro">Personal projects made in Blender. Click an image to view it larger.</p>
+            <p class="intro">Selected work made in Blender. Click an image to view it larger.</p>
+
+            <h3 class="group-title">Independent Research</h3>
+            <p class="group-intro">Work from my independent research game project, WordCooked.</p>
+
+            <article class="character">
+                <div class="character-intro">
+                    <h3>Stylized Character</h3>
+                    <p>A stylized chibi character modeled, rigged and set up with facial shape keys in Blender.</p>
+                    <p class="meta"><span>Blender</span> <span>Modeling</span> <span>Rigging</span> <span>Shape keys</span></p>
+                </div>
+
+                <button type="button" class="character-main" data-lightbox data-title="Stylized Character, main render">
+                    <img src="assets/karakter/1.png" alt="Main render of a stylized chibi character with orange hair, a red top and an olive skirt" loading="lazy">
+                </button>
+
+                <h4>Turnaround</h4>
+                <div class="character-row">
+                    <figure>
+                        <button type="button" data-lightbox data-title="Turnaround: right">
+                            <img src="assets/karakter/2.png" alt="Character seen from the right" loading="lazy">
+                        </button>
+                        <figcaption>Right</figcaption>
+                    </figure>
+                    <figure>
+                        <button type="button" data-lightbox data-title="Turnaround: left">
+                            <img src="assets/karakter/3.png" alt="Character seen from the left" loading="lazy">
+                        </button>
+                        <figcaption>Left</figcaption>
+                    </figure>
+                    <figure>
+                        <button type="button" data-lightbox data-title="Turnaround: back">
+                            <img src="assets/karakter/4.png" alt="Character seen from the back" loading="lazy">
+                        </button>
+                        <figcaption>Back</figcaption>
+                    </figure>
+                </div>
+
+                <h4>Expressions</h4>
+                <div class="character-row">
+                    <figure>
+                        <button type="button" data-lightbox data-title="Expression: Smile">
+                            <img src="assets/karakter/ex 1.png" alt="Character with a smile expression" loading="lazy">
+                        </button>
+                        <figcaption>Smile</figcaption>
+                    </figure>
+                    <figure>
+                        <button type="button" data-lightbox data-title="Expression: Blink">
+                            <img src="assets/karakter/ex 2.png" alt="Character with a blink expression" loading="lazy">
+                        </button>
+                        <figcaption>Blink</figcaption>
+                    </figure>
+                    <figure>
+                        <button type="button" data-lightbox data-title="Expression: Happy">
+                            <img src="assets/karakter/ex 3.png" alt="Character with a happy expression" loading="lazy">
+                        </button>
+                        <figcaption>Happy</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <h3 class="group-title">Personal Projects</h3>
+            <p class="group-intro">Models and renders I made on my own initiative.</p>
+
+            <div class="showcase">
+                <figure class="showcase-photo">
+                    <button type="button" data-lightbox data-title="Battleship Yamato">
+                        <img src="assets/porto2.png" alt="Render of Battleship Yamato" loading="lazy">
+                    </button>
+                </figure>
+                <div class="showcase-model">
+                    <model-viewer data-src="assets/models/yamato.glb"
+                        alt="Interactive 3D model of Battleship Yamato"
+                        camera-controls touch-action="pan-y"
+                        camera-orbit="0deg 90deg 85%"></model-viewer>
+                    <img class="model-poster" src="assets/porto2.png" alt="">
+                    <button type="button" class="load-model" id="load-model">View in 3D (53 MB)</button>
+                    <p class="hint" hidden>Drag to rotate, scroll to zoom</p>
+                </div>
+                <div class="showcase-caption">
+                    <h3>Battleship Yamato</h3>
+                    <p>A 3D model of the Japanese battleship Yamato, made in Blender. The render is on the left. Drag the model on the right to look at it from every angle.</p>
+                </div>
+            </div>
+
+            <article class="character">
+                <div class="character-intro">
+                    <h3>Mr. Owl Character</h3>
+                    <!-- TODO: lengkapi deskripsi (konsep, peranmu, tools, desain oleh siapa) -->
+                    <p>A 3D Mr. Owl character made in Blender.</p>
+                    <p class="meta"><span>Blender</span> <span>Modeling</span> <span>Rigging</span></p>
+                </div>
+
+                <button type="button" class="character-main" data-lightbox data-title="Mr. Owl Character, main render">
+                    <img src="assets/owl/render%20utama.png" alt="Main render of a 3D owl character" loading="lazy">
+                </button>
+
+                <h4>Turnaround</h4>
+                <div class="character-row">
+                    <figure>
+                        <button type="button" data-lightbox data-title="Turnaround: left">
+                            <img src="assets/owl/kiri.png" alt="Mr. Owl character seen from the left" loading="lazy">
+                        </button>
+                        <figcaption>Left</figcaption>
+                    </figure>
+                    <figure>
+                        <button type="button" data-lightbox data-title="Turnaround: back">
+                            <img src="assets/owl/belakang.png" alt="Mr. Owl character seen from the back" loading="lazy">
+                        </button>
+                        <figcaption>Back</figcaption>
+                    </figure>
+                    <figure>
+                        <button type="button" data-lightbox data-title="Turnaround: right">
+                            <img src="assets/owl/kanan.png" alt="Mr. Owl character seen from the right" loading="lazy">
+                        </button>
+                        <figcaption>Right</figcaption>
+                    </figure>
+                </div>
+            </article>
+
             <div class="works">
-                <figure class="work work-featured">
+                <figure class="work">
                     <button type="button" data-lightbox data-title="The Blackhole">
                         <img src="assets/porto1.png" alt="A black hole bending light, surrounded by a glowing accretion disk" loading="lazy">
                     </button>
                     <figcaption>
                         <h3>The Blackhole</h3>
                         <p>A black hole with a glowing accretion disk, showing light bending around its dark center.</p>
-                    </figcaption>
-                </figure>
-                <figure class="work">
-                    <button type="button" data-lightbox data-title="The Galaxies">
-                        <img src="assets/porto2.png" alt="Three spiral galaxies in blue, purple and brown against a starfield" loading="lazy">
-                    </button>
-                    <figcaption>
-                        <h3>The Galaxies</h3>
-                        <p>Three spiral galaxies with different colors floating in a starfield.</p>
-                    </figcaption>
-                </figure>
-                <figure class="work">
-                    <button type="button" data-lightbox data-title="Guardians of the Sea and Sky">
-                        <img src="assets/porto3.png" alt="A naval fleet with an aircraft carrier at sunset in front of misty mountains" loading="lazy">
-                    </button>
-                    <figcaption>
-                        <h3>Guardians of the Sea and Sky</h3>
-                        <p>A naval fleet at sunset with an aircraft carrier, two warships and fighter jets overhead.</p>
                     </figcaption>
                 </figure>
                 <figure class="work">
@@ -153,10 +255,12 @@
                     <ul class="skills">
                         <li>Blender</li>
                         <li>Unity 6</li>
-                        <li>3D modeling</li>
-                        <li>Environment design</li>
+                        <li>3D Modeling</li>
+                        <li>Environment Design</li>
                         <li>2D art</li>
-                        <!-- TODO: add more skills here, for example texturing, rigging, animation -->
+                        <li>Rigging</li>
+                        <li>Shape keys</li>
+                        <!-- TODO: add more skills here, for example animation, pixel art, UI/UX -->
                     </ul>
                 </div>
             </div>
@@ -169,9 +273,7 @@
                 <a class="btn" href="mailto:yoasnevilsandy@gmail.com">yoasnevilsandy@gmail.com</a>
                 <a class="btn btn-ghost" href="https://github.com/oeejoo" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a class="btn btn-ghost" href="https://oeejoo.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a>
-                <!-- TODO: uncomment when your LinkedIn is ready
-                <a class="btn btn-ghost" href="https://www.linkedin.com/in/YOUR-NAME" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                -->
+                <a class="btn btn-ghost" href="https://www.linkedin.com/in/yoasnevilsandy/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
         </section>
     </main>

@@ -11,6 +11,8 @@
     --link: #d9b8f0;
     --radius: 10px;
     --max: 1100px;
+    --showcase-gap: 20px;
+    --caption-gap: 12px;
 }
 
 /* 2. Reset and base */
@@ -88,13 +90,92 @@ p { max-width: 65ch; }
 .hero p { color: var(--text); margin-bottom: 24px; }
 @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
 
-/* 7. 3D works */
+/* 7a. Showcase (render + interactive model) */
+.showcase { display: grid; gap: var(--showcase-gap); align-items: start; margin-bottom: 40px; }
+.showcase-photo, .showcase-model {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+/* Children are absolutely positioned so only aspect-ratio sets the box height */
+.showcase-photo button { position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.showcase-photo img { width: 100%; height: 100%; object-fit: contain; }
+.showcase-model model-viewer { position: absolute; inset: 0; width: 100%; height: 100%; }
+.model-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.model-poster[hidden] { display: none; }
+.hint { position: absolute; left: 12px; bottom: 8px; font-size: 0.8rem; color: var(--muted); pointer-events: none; }
+
+.load-model {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 12px 26px;
+    background: var(--gradient);
+    color: #fff;
+    border: 0;
+    border-radius: 30px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+.load-model:disabled { cursor: progress; opacity: 0.85; }
+.load-model[hidden] { display: none; }
+
+/* Caption sits --caption-gap below the boxes (cancels the grid gap) */
+.showcase-caption { grid-column: 1 / -1; margin-top: calc(var(--caption-gap) - var(--showcase-gap)); }
+.showcase-caption h3 { font-size: 1.1rem; }
+.showcase-caption p { color: var(--muted); font-size: 0.92rem; }
+
+/* 7b. Works grid */
 .works { display: grid; gap: 28px; }
-.work button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: var(--radius); overflow: hidden; }
-.work img { width: 100%; height: auto; }
-.work figcaption { padding-top: 10px; }
+.work button { position: relative; display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16 / 9; }
+.work img { width: 100%; height: 100%; object-fit: cover; }
+.work figcaption { padding-top: var(--caption-gap); }
 .work h3 { font-size: 1.1rem; }
 .work p { color: var(--muted); font-size: 0.92rem; }
+
+/* 7c. Hover zoom (one place for all) */
+.showcase-photo, .work button { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+@media (hover: hover) {
+    .showcase-photo:hover,
+    .showcase-photo:has(button:focus-visible),
+    .work button:hover,
+    .work button:focus-visible {
+        transform: scale(1.03);
+        z-index: 2;
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6), 0 0 0 2px var(--pink);
+    }
+    .work button:hover,
+    .work button:focus-visible { transform: scale(1.015); }
+}
+
+/* 7d. Character project */
+.character { margin-bottom: 40px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.character-intro { margin-bottom: 20px; }
+.character-intro h3 { font-size: 1.3rem; }
+.character-intro p:not(.role):not(.meta) { margin: 8px 0 12px; color: var(--muted); font-size: 0.92rem; }
+.character button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: var(--radius); overflow: hidden; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.character img { width: 100%; height: 100%; object-fit: cover; }
+.character-main { aspect-ratio: 16 / 9; }
+.character h4 { margin: 28px 0 12px; font-size: 1rem; color: var(--muted); }
+.character-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.character-row button { aspect-ratio: 3 / 4; }
+.character figcaption { padding-top: 6px; font-size: 0.85rem; color: var(--muted); }
+@media (hover: hover) {
+    .character button:hover,
+    .character button:focus-visible { transform: scale(1.02); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5), 0 0 0 2px var(--pink); }
+}
+@media (prefers-reduced-motion: reduce) { .character button { transition: none; } }
+
+/* 7e. Category headings inside 3D works */
+.group-title { margin: 48px 0 6px; padding-bottom: 8px; font-size: 1.4rem; border-bottom: 1px solid var(--line); }
+.intro + .group-title { margin-top: 0; }
+.group-intro { margin: 10px 0 20px; color: var(--muted); font-size: 0.92rem; }
 
 /* 8. Games */
 .games { display: grid; gap: 20px; }
@@ -131,20 +212,18 @@ p { max-width: 65ch; }
 /* 12. Responsive (mobile first) */
 @media (min-width: 768px) {
     .site-header { padding: 14px 40px; }
-    .works { grid-template-columns: repeat(2, 1fr); }
-    .work-featured { grid-column: 1 / -1; }
+    .showcase { grid-template-columns: 1fr 1fr; }
     .games { grid-template-columns: repeat(2, 1fr); }
     .about { grid-template-columns: 200px 1fr; gap: 40px; }
 }
 @media (min-width: 1024px) {
+    .showcase-photo, .showcase-model { aspect-ratio: 16 / 9; }
     .games { grid-template-columns: repeat(4, 1fr); }
-    .works { grid-template-columns: repeat(3, 1fr); }
-    .work-featured { grid-column: span 3; }
 }
 
 /* 13. Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .hero-text { animation: none; }
-    .btn { transition: none; }
+    .btn, .work button, .showcase-photo { transition: none; }
 }
